@@ -1,2 +1,89 @@
-<h1>CheerUP</h1>
+<%= render "shared/header.html.erb" %>
+<div class='main'>
 
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      「 未来のスターを応援する 」
+    </h2>
+    <p class='service-explain'>
+      夢見るインディーズアーティスト応援アプリ
+    </p>
+    <p class='service-explain'>
+      あなたの力で! みんなの力で! CheerUP!
+    </p>
+  </div>
+</div>
+  <div class='select-cando-contents'>
+    <h2 class='title'>
+      このアプリでできること
+    </h2>
+    <ul class='cando-lists'>
+      <li class='list'>
+        <%#= image_tag "#", class:"list-pict" %>
+        <span class='cando-list-number'>1</span>
+        <h3 class='cando-list-text'>
+          <span class='cando-list-blue-text'> UP! 機能</span>
+        </h3>
+        <p class='cando-list-description'>
+          応援しているアーティストを掲載できる！
+        </p>
+      </li>
+      <li class='list'>
+        <%#= image_tag "#", class:"list-pict" %>
+        <span class='cando-list-number'>2</span>
+        <h3 class='cando-list-text'>
+          <span class='cando-list-blue-text'> Check 機能</span>
+        </h3>
+        <p class='cando-list-description'>
+          気になるアーティストをチェックできる！
+        </p>
+      </li>
+      <li class='list'>
+        <%#= image_tag "#", class:"list-pict" %>
+        <span class='cando-list-number'>3</span>
+        <h3 class='cando-list-text'>
+          <span class='cando-list-blue-text'> Cheer 機能</span>
+        </h3>
+        <p class='cando-list-description'>
+          応援したいアーティストを支援できる！
+        </p>
+      </li>
+    </ul>
+  </div>
+
+<div class='artist-contents'>
+    <h2 class='title'>Cheak!</h2>
+    <%= link_to 'アーティスト一覧', "#", class: "subtitle" %>
+    <ul class='artist-lists'>
+
+    <%# @item.each do |item|%>
+      <li class='list'>
+        <%#= link_to item_path(item.id), method: :get do %>
+        <div class='artist-img-content'>
+          <%= image_tag "sample.JPG", class: "artist-img" %>
+          
+        </div>
+        <div class='artist-info'>
+          <h3 class='artist-name'>
+            <%#= item.name %>Kaoru
+          </h3>
+          <div class='artist-genre'>
+            <span><%#= item.price %>活動拠点 : <br>ジャンル : </span>
+            <div class='heart-btn'>
+              <%= image_tag "heart.PNG", class:"heart-icon" %>
+              <span class='heart-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <%# end %>
+      </li>
+    <%# end %>
+    </ul>
+  </div>
+
+<div class='up-btn'>
+    <%= image_tag 'up.PNG' ,class: "up-btn-icon" %>
+</div>
+
+
+<%= render "shared/footer.html.erb" %>
