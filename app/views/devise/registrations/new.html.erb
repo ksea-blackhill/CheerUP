@@ -70,11 +70,22 @@
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">生年月日</label>
+      <label class="form-text">年齢</label>
       <span class="indispensable">必須</span>
     </div>
-    <div class='input-birth-wrap'>
-     
+  
+    <div class="form">
+      <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"user-select-box", id:"user-age"}) %>
+      <div class='form-text-wrap'>
+        <label class="form-text">都道府県</label>
+        <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"user-select-box", id:"user-prefecture"}) %>
+      <div class='form-text-wrap'>
+        <label class="form-text">性別</label>
+        <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"user-select-box", id:"user-gender"}) %>
     </div>
     <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
   </div>

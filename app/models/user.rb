@@ -1,6 +1,12 @@
-class User < ApplicationRecord
+class User < ApplicationRecord       
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :age
+  belongs_to_active_hash :prefecture
+  belongs_to_active_hash :gender
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+       
 
   has_many :artists
   has_many :supports
