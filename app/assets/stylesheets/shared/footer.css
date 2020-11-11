@@ -1,0 +1,67 @@
+.footer {
+  width: 100vw;
+  padding: 5vh 10vw 10vh 2vw;
+  color: black;
+  background-color: #FFFFCC;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-contents {
+  display: flex;
+  margin-bottom: 1vh;
+  list-style: none;
+}
+
+.cheer_up-details {
+  margin: 0 5vw 0 2vw;
+}
+
+.footer-content-head {
+  font-size: 20px;
+  font-weight: bold;
+  position: center;
+  margin-left: 2vw;
+}
+
+.footer-link {
+  color:black;
+  font-size: 17px;
+  line-height: 25px;
+  text-decoration: none;
+  display:flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.logo-mark {
+  position: right;
+  margin-left:8vw;
+}
+
+.logo {
+  width: 15vh;
+  vertical-align: bottom;
+}
+
+.footer>p {
+  font-size: 14px;
+}
+
+.company-lists{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  text-align: justify;
+}
+
+.app-lists{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  text-align: justify;
+  margin-left: 5vw;
+}
