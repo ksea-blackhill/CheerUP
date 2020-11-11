@@ -101,3 +101,20 @@
   border: 2px solid #f4a460;
   padding: 6px;
 }
+
+.user-nickname{
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+  border: 2px solid #f4a460;
+  padding: 6px;
+}
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+  border: 2px solid #f4a460;
+  padding: 6px;
+}
+
