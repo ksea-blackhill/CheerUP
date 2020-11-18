@@ -3,6 +3,7 @@ class Artist < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :genre
   belongs_to_active_hash :member
+  belongs_to_active_hash :artist_gender
 
   belongs_to :user
 end

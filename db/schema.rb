@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_18_090539) do
     t.text "description", null: false
     t.integer "genre_id", null: false
     t.integer "member_id", null: false
+    t.integer "artist_gender_id", null: false
     t.integer "prefecture_id", null: false
     t.string "social", null: false
     t.bigint "user_id", null: false
