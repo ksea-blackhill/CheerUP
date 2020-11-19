@@ -11,10 +11,10 @@ class Artist < ApplicationRecord
   has_one_attached :video
 
   with_options presence: true do
+    validates :image
     validates :name, uniqueness: true
     validates :description, length: {minimum: 20 }
-    validates :social
-    validates :image
+    validates :social,url: true
     validates :video
   end
 
@@ -25,8 +25,6 @@ class Artist < ApplicationRecord
     validates :artist_gender_id
   end
 
-  with_options format: {/\Ahttp(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?/} do
-    validates :social
-    validates :url, allow_nil: true
-  end
+  validates :url, url: { allow_blank: true }
+
 end
