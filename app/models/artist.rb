@@ -7,11 +7,15 @@ class Artist < ApplicationRecord
   belongs_to_active_hash :artist_gender
 
   belongs_to :user
+  has_one_attached :image
+  has_one_attached :video
 
   with_options presence: true do
-    validates :name
+    validates :name, uniqueness: true
     validates :description, length: {minimum: 20 }
     validates :social
+    validates :image
+    validates :video
   end
 
   with_options numericality: { other_than: 1 } do
@@ -23,6 +27,6 @@ class Artist < ApplicationRecord
 
   with_options format: {/\Ahttp(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?/} do
     validates :social
-    validates :url
+    validates :url, allow_nil: true
   end
 end
