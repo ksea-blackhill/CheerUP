@@ -16,10 +16,12 @@ ActiveRecord::Schema.define(version: 2020_11_18_090539) do
     t.string "name", null: false
     t.text "description", null: false
     t.integer "genre_id", null: false
+    t.integer "sub_genre_id"
     t.integer "member_id", null: false
     t.integer "artist_gender_id", null: false
     t.integer "prefecture_id", null: false
     t.string "social", null: false
+    t.string "url"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
