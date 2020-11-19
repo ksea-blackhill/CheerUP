@@ -3,7 +3,7 @@ class ArtistGender < ActiveHash::Base
     { id: 1, name: '--' },
     { id: 2, name: '男性' },
     { id: 3, name: '女性' },
-    { id: 3, name: '男女混合' },
+    { id: 4, name: '男女混合' },
   ]
 
   include ActiveHash::Associations

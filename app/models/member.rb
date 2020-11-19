@@ -3,7 +3,7 @@ class Member < ActiveHash::Base
     { id: 1, name: '--' },
     { id: 2, name: 'ソロ' },
     { id: 3, name: 'デュオ' },
-    { id: 3, name: 'グループ' },
+    { id: 4, name: 'グループ' },
   ]
 
   include ActiveHash::Associations
