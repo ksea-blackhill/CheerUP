@@ -56,28 +56,28 @@
     <%= link_to 'アーティスト一覧', "#", class: "subtitle" %>
     <ul class='artist-lists'>
 
-    <%# @item.each do |item|%>
+    <% @artist.each do |artist|%>
       <li class='list'>
-        <%#= link_to item_path(item.id), method: :get do %>
+        <%= link_to '#', method: :get do %>
         <div class='artist-img-content'>
-          <%= image_tag "sample.JPG", class: "artist-img" %>
+          <%= image_tag artist.image, class: "artist-img" %>
           
         </div>
         <div class='artist-info'>
           <h3 class='artist-name'>
-            <%#= item.name %>Kaoru
+            <%= artist.name %>
           </h3>
           <div class='artist-genre'>
-            <span><%#= item.price %>活動拠点 : <br>ジャンル : </span>
+            <span>活動拠点 :  <%= artist.prefecture.name %><br>ジャンル :  <%= artist.genre.name %></span>
             <div class='heart-btn'>
               <%= image_tag "heart.PNG", class:"heart-icon" %>
               <span class='heart-count'>0</span>
             </div>
           </div>
         </div>
-        <%# end %>
+        <% end %>
       </li>
-    <%# end %>
+    <% end %>
     </ul>
   </div>
 
