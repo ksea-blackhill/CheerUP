@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
   before_action :authenticate_user!, except: :index
 
   def index
-    #@artist = Artist.all
+    @artist = Artist.all
   end
 
   def new
@@ -22,7 +22,7 @@ class ArtistsController < ApplicationController
   private
 
   def artist_params
-    params.require(:artist).permit(:image,:name,:description,:genre_id,:sub_genre_id,:member_id,:artist_gender_id,:prefecture_id,:social,:url).merge(user_id: current_user.id)
+    params.require(:artist).permit(:image,:name,:description,:genre_id,:sub_genre_id,:member_id,:artist_gender_id,:prefecture_id,:social,:video,:url).merge(user_id: current_user.id)
   end
 
   
