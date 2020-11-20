@@ -11,10 +11,10 @@ class Artist < ApplicationRecord
   has_one_attached :video
 
   with_options presence: true do
+    validates :image
     validates :name, uniqueness: true
     validates :description, length: {minimum: 20 }
-    validates :social
-    validates :image
+    validates :social,url: true
     validates :video
   end
 
@@ -25,8 +25,32 @@ class Artist < ApplicationRecord
     validates :artist_gender_id
   end
 
-  with_options format: {/\Ahttp(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w-.\/?%&=]*)?/} do
-    validates :social
-    validates :url, allow_nil: true
+  validates :url, url: { allow_blank: true }
+
+  validate :image_checker, if: :was_attached?
+  validate :video_checker, if: :video_was_attached?
+
+  private
+  def image_checker
+    extension = ['image/png','image/PNG','image/jpeg']
+    unless image.content_type.in?(extension)
+      errors.add(:image, 'は画像を添付してください')
+    end
   end
+
+  def was_attached?
+    self.image.attached?
+  end
+
+  def video_checker
+    extension = ['video/quicktime','video/mp4']
+    unless video.content_type.in?(extension)
+      errors.add(:video, 'は動画を添付してください')
+    end
+  end
+
+  def video_was_attached?
+    self.video.attached?
+  end
+
 end

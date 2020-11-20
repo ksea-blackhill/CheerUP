@@ -23,13 +23,13 @@
   font-size: 20px;
   font-weight: bold;
   position: center;
-  margin-left: 2vw;
+  color: black;
 }
 
 .footer-link {
   color:black;
   font-size: 17px;
-  line-height: 25px;
+  line-height: 35px;
   text-decoration: none;
   display:flex;
   flex-flow: column;

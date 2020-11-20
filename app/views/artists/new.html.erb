@@ -1,13 +1,13 @@
 <div class="artists-up-contents">
   <header class="artists-up-header">
-    <%= link_to image_tag('logo.PNG' , size: '185x50'), root_path %>
+    <%= link_to image_tag('up.PNG' , size: '130x130'), root_path %>
 
   </header>
   <div class="artists-up-main">
     <h2 class="artists-up-title">アーティストの詳細を入力</h2>
     <%= form_with model: @artist,url: artists_path,local: true do |f| %>
 
-    <%#= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
     
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -33,12 +33,11 @@
           アーティストの説明
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :description, class:"artists-text", id:"artist-info", placeholder:"アーティストの説明（必須 20文字以上）<bn>例）20xx年頃に〇〇でのストリートLIVEをきっかけにファンになりました。透き通るような歌声に惹かれ、毎日聴いています。もっと多くの方々に知ってもらい、応援してもらいたいです。" ,rows:"20" ,maxlength:"1000" %>
+        <%= f.text_area :description, class:"artists-text", id:"artist-info", placeholder:"アーティストの説明（必須 20文字以上）例）20xx年頃に〇〇でのストリートLIVEをきっかけにファンになりました。透き通るような歌声に惹かれ、毎日聴いています。もっと多くの方々に知ってもらい、応援してもらいたいです。" ,rows:"20" ,maxlength:"1000" %>
       </div>
     </div>
  
     <div class="artists-detail">
-      <div class="weight-bold-text">さらに詳しい説明</div>
       <div class="form">
         <div class="weight-bold-text">
           活動拠点
@@ -74,7 +73,9 @@
           LIVE映像、PVの一部など
           <span class="indispensable">必須</span>
         </div>
+        <div class="vdo-click-upload">
         <%= f.file_field :video, id:"artist-video" %>
+        </div>
         <div class="weight-bold-text">
           ホームページがもしあれば記載
         </div>
@@ -100,7 +101,7 @@
   
     <div class="new-up-btn-contents">
       <%= f.submit "投稿する" , class:"new-up-btn" %>
-      <%=link_to 'もどる', root_path, class:"new-back-btn" %>
+      <%=link_to '戻る', root_path, class:"new-back-btn" %>
     </div>
   </div>
   <% end %>
@@ -110,7 +111,7 @@
       <li><a href="#">プライバシーポリシー</a></li>
       <li><a href="#">利用規約</a></li>
     </ul>
-    <%= link_to image_tag('logo.PNG' , size: '185x50'), root_path %>
+    <%= link_to image_tag('logo.PNG' , size: '100x100'), root_path %>
     <p class="inc">
       ©︎BluckHill Management Inc.
     </p>
