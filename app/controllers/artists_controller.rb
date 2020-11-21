@@ -2,7 +2,7 @@ class ArtistsController < ApplicationController
   before_action :authenticate_user!, except: :index
 
   def index
-    @artist = Artist.all
+    @artist = Artist.all.order(created_at: "DESC")
   end
 
   def new
