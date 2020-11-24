@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :set_artist, only: [:show,:edit,:update]
+  before_action :set_artist, only: [:show,:edit,:update,:destroy]
 
   def index
     @artist = Artist.all.order(created_at: "DESC")
@@ -31,6 +31,11 @@ class ArtistsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @artist.destroy
+    redirect_to root_path
   end
   
 
