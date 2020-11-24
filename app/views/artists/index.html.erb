@@ -58,7 +58,7 @@
 
     <% @artist.each do |artist|%>
       <li class='list'>
-        <%= link_to '#', method: :get do %>
+        <%= link_to artist_path(artist.id), method: :get do %>
         <div class='artist-img-content'>
           <%= image_tag artist.image, class: "artist-img" %>
           
