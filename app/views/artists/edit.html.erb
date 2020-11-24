@@ -1,0 +1,119 @@
+<div class="artists-up-contents">
+  <header class="artists-up-header">
+    <%= link_to image_tag('up.PNG' , size: '130x130'), root_path %>
+
+  </header>
+  <div class="artists-up-main">
+    <h2 class="artists-up-title">アーティストの詳細を入力</h2>
+    <%= form_with model: @artist,local: true do |f| %>
+
+    <%#= render 'shared/error_messages', model: f.object %>
+    
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        アーティストイメージ
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"artist-image" %>
+      </div>
+    </div>
+   
+    <div class="new-artists">
+      <div class="weight-bold-text">
+        アーティスト名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"artists-text", id:"artist-name", placeholder:"アーティスト名" %>
+      <div class="artists-explain">
+        <div class="weight-bold-text">
+          アーティストの説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"artists-text", id:"artist-info", placeholder:"アーティストの説明（必須 20文字以上）例）20xx年頃に〇〇でのストリートLIVEをきっかけにファンになりました。透き通るような歌声に惹かれ、毎日聴いています。もっと多くの方々に知ってもらい、応援してもらいたいです。" ,rows:"20" ,maxlength:"1000" %>
+      </div>
+    </div>
+ 
+    <div class="artists-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          活動拠点
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"artist-prefecture"}) %>
+        <div class="weight-bold-text">
+          ジャンル
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"artist-genre"}) %>
+        <div class="weight-bold-text">
+          ジャンル(１つとは限らない場合は選択)
+        </div>
+        <%= f.collection_select(:sub_genre_id, SubGenre.all, :id, :name, {}, {class:"select-box", id:"artist-sub-genre"}) %>
+      
+        <div class="weight-bold-text">
+          メンバー構成(性別)
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:artist_gender_id, ArtistGender.all, :id, :name, {}, {class:"select-box", id:"artist-gender"}) %>
+        <div class="weight-bold-text">
+          メンバー形態(人数)
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:member_id, Member.all, :id, :name, {}, {class:"select-box", id:"artist-member"}) %>
+        <div class="weight-bold-text">
+          SNSのリンク(どれかひとつでOK)
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :social, class:"artists-social", id:"artist-social", placeholder:"Twitter、Instagram、Youtubeチャンネルなど" %>
+        <div class="weight-bold-text">
+          LIVE映像、PVの一部など
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="vdo-click-upload">
+        <%= f.file_field :video, id:"artist-video" %>
+        </div>
+        <div class="weight-bold-text">
+          ホームページがもしあれば記載
+        </div>
+        <%= f.text_area :url, class:"artists-url", id:"artist-url", placeholder:"ホームページのURLを添付" %>
+      </div>
+    </div> 
+    <div class="caution">
+      <p class="sentence">
+        <a href="#">禁止されている行為</a>
+        を必ずご確認ください。
+      </p>
+      <p class="sentence">
+        また投稿前にアーティストへの掲載許可を事前にお取りいただくことをおすすめいたします。
+        無断掲載は著作権、肖像権の侵害となり、処罰される可能性があります。
+      </p>
+      <p class="sentence">
+        投稿前に
+        <a href="#">利用規約</a>
+        をお読みください。
+        投稿が完了した場合、こちらに同意したことといたします。
+      </p>
+    </div>
+  
+    <div class="new-up-btn-contents">
+      <%= f.submit "投稿する" , class:"new-up-btn" %>
+      <%=link_to '戻る', root_path, class:"new-back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="artists-up-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">利用規約</a></li>
+    </ul>
+    <%= link_to image_tag('logo.PNG' , size: '100x100'), root_path %>
+    <p class="inc">
+      ©︎BluckHill Management Inc.
+    </p>
+  </footer>
+</div>
