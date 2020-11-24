@@ -52,11 +52,13 @@
         </tr>
         <tr>
           <th class="detail-artist">SNSリンク</th>
-          <td class="detail-value"><%= @artist.social %></td>
+          <td class="detail-social-value"><%=link_to @artist.social, @artist.social %></td>
         </tr>
         <tr>
           <th class="detail-artist">映像リンク</th>
-          <td class="detail-value"><%= @artist.video.filename %></td>
+          <td class="detail-value">
+            <video src="<%= rails_blob_path(@artist.video)%>" type="video/mov",class="artist-video" controls></video>
+          </td>
         </tr>
         <tr>
           <th class="detail-artist">ホームページ</th>
