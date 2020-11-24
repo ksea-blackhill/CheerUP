@@ -1,0 +1,183 @@
+/* ヘッダ部分 */
+.check-header{
+  padding-top: 5vh;
+  text-align: center;
+  background-color:#FFFFCC;
+}
+/* ヘッダ部分 */
+
+/* アーティストの概要 */
+
+.artist-show {
+  background-color: #FFFFCC;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0;
+}
+
+.artist-box {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 1200px;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-show-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 6vh;
+}
+
+.artist-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: #FFF(205, 202, 202);
+  object-fit: contain;
+}
+
+.artist-name-box {
+  margin: 25px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.artist-show-btn {
+  text-align: center;
+  background-color: #f4a460;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.artist-show-cheer-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 9.5vw;
+}
+
+.artist-destroy {
+  background-color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFF;
+  padding: 2vh 11vw;
+}
+
+.artist-explain-box {
+  font-size: 18px;
+  margin: 40px 0px;
+}
+.artist-explain-box-name{
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-artist {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 16px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px 20px 20px 30px;
+  border: 1px solid #dedede;
+  font-size: 16px;
+  
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.heart-show-btn {
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+  color: rgb(249, 75, 0);
+  border: 2px solid #ffb340;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.heart-show-icon {
+  margin-right: 5px;
+}
+
+.pato-btn {
+  border-radius: 40px;
+  width: 15vw;
+  min-width: 200px;
+
+  padding: 1vh 0;
+  color: black;
+  border: 2px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pato-icon {
+  margin-right: 5px;
+}
+
+
+/* /アーティストの概要 */
+
+
+/* コメント機能 */
+
+.artist-comment{
+  font-size:20px;
+  font-weight: bold;
+}
+
+.comment-box {
+  width: 53vw;
+  background-color: #fff;
+  margin: 3vh 0 5vh 0 ;
+  text-align: center;
+}
+
+.comment-text {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: solid 2px #dedede;
+  resize: none;
+}
+
+.comment-warn {
+  padding: 10px;
+  font-size: 16px;
+  margin: 15px 0 5px 0 ;
+  text-align: left;
+}
+/* コメント機能 */

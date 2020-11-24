@@ -55,12 +55,12 @@
         <%= f.collection_select(:sub_genre_id, SubGenre.all, :id, :name, {}, {class:"select-box", id:"artist-sub-genre"}) %>
       
         <div class="weight-bold-text">
-          メンバー構成
+          メンバー構成(性別)
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:artist_gender_id, ArtistGender.all, :id, :name, {}, {class:"select-box", id:"artist-gender"}) %>
         <div class="weight-bold-text">
-          メンバー形態
+          メンバー形態(人数)
           <span class="indispensable">必須</span>
         </div>
         <%= f.collection_select(:member_id, Member.all, :id, :name, {}, {class:"select-box", id:"artist-member"}) %>

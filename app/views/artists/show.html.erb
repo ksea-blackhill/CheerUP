@@ -1,0 +1,97 @@
+<header class="check-header">
+    <%= link_to image_tag('check.png' , size: '180x180'), root_path %>
+</header>
+
+<div class="artist-show">
+  <div class="artist-box">
+    <div class='artist-img-content'>
+      <%= image_tag @artist.image ,class:"artist-box-img" %>
+    </div>
+    <div class="artist-name-box">
+      <span class="artist-show-name">
+        <%= @artist.name %> 
+      </span>
+    </div>
+
+  <%# if @item.payment == nil %>
+    <%# if user_signed_in?%>
+      <%# if current_user == @item.user %>
+        <%= link_to '内容の編集',  "#", class: "artist-show-btn" %>
+     
+        <%= link_to '削除する', "#", class:'artist-destroy' %>
+
+        <%= link_to 'Cheer! する', "#" ,class:"artist-show-cheer-btn"%>
+      <%# else %>
+        <%#= link_to 'Cheer! する', "#" ,class:"artist-show-btn"%>
+      <%# end %>
+    <%# end %>
+  <%# end %>
+
+    <div class="artist-explain-box">
+      <span class="artist-explain-box-name"><%= @artist.name %> の詳細 </span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-artist">活動拠点</th>
+          <td class="detail-value"><%= @artist.prefecture.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">ジャンル</th>
+          <td class="detail-value"><%= @artist.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">ジャンル ②</th>
+          <td class="detail-value"><%= @artist.sub_genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">メンバー構成</th>
+          <td class="detail-value"><%= @artist.artist_gender.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">メンバー形態</th>
+          <td class="detail-value"><%= @artist.member.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">SNSリンク</th>
+          <td class="detail-value"><%= @artist.social %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">映像リンク</th>
+          <td class="detail-value"><%= @artist.video.filename %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">ホームページ</th>
+          <td class="detail-value"><%= @artist.url %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">アーティストの説明</th>
+          <td class="detail-value"><%= @artist.description %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class= "artist-comment">コメント一覧</div>
+    <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+    </form>
+    </div>
+    <div class="option">
+      <div class="heart-show-btn">
+        <%= image_tag "heart.PNG" ,class:"heart-show-icon" ,width:"20",height:"20"%>
+        <span>お気に入り 0</span>
+      </div>
+      <div class="pato-btn">
+        <%= image_tag "pato.PNG" ,class:"pato-icon" ,width:"20",height:"20"%>
+        <span>不適切なため通報する</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/second_footer" %>
