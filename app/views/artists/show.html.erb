@@ -13,19 +13,17 @@
       </span>
     </div>
 
-  <%# if @item.payment == nil %>
-    <%# if user_signed_in?%>
-      <%# if current_user == @item.user %>
+    <% if user_signed_in?%>
+      <% if current_user == @artist.user %>
         <%= link_to '内容の編集',  "#", class: "artist-show-btn" %>
      
         <%= link_to '削除する', "#", class:'artist-destroy' %>
 
         <%= link_to 'Cheer! する', "#" ,class:"artist-show-cheer-btn"%>
-      <%# else %>
-        <%#= link_to 'Cheer! する', "#" ,class:"artist-show-btn"%>
-      <%# end %>
-    <%# end %>
-  <%# end %>
+      <% else %>
+        <%= link_to 'Cheer! する', "#" ,class:"artist-show-cheer-btn"%>
+      <% end %>
+    <% end %>
 
     <div class="artist-explain-box">
       <span class="artist-explain-box-name"><%= @artist.name %> の詳細 </span>
@@ -67,6 +65,10 @@
         <tr>
           <th class="detail-artist">アーティストの説明</th>
           <td class="detail-value"><%= @artist.description %></td>
+        </tr>
+        <tr>
+          <th class="detail-artist">投稿者</th>
+          <td class="detail-value"><%= @artist.user.nickname %></td>
         </tr>
       </tbody>
     </table>
