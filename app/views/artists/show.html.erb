@@ -15,7 +15,7 @@
 
     <% if user_signed_in?%>
       <% if current_user == @artist.user %>
-        <%= link_to '内容の編集',  "#", class: "artist-show-btn" %>
+        <%= link_to '内容の編集', edit_artist_path(@artist), class: "artist-show-btn" %>
         <%= link_to '削除する', "#", class:'artist-destroy' %>
         <%= link_to 'Cheer! する', "#" ,class:"artist-show-cheer-btn"%>
         <%= link_to 'もどる', "/", class:"artist-show-back-btn"%>
