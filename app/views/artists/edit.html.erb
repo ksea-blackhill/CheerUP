@@ -1,13 +1,13 @@
 <div class="artists-up-contents">
   <header class="artists-up-header">
-    <%= link_to image_tag('up.PNG' , size: '130x130'), root_path %>
+    <%= link_to image_tag('logo.PNG' , size: '130x130'), root_path %>
 
   </header>
   <div class="artists-up-main">
-    <h2 class="artists-up-title">アーティストの詳細を入力</h2>
+    <h2 class="artists-up-title">アーティストの詳細を編集する</h2>
     <%= form_with model: @artist,local: true do |f| %>
 
-    <%#= render 'shared/error_messages', model: f.object %>
+    <%= render 'shared/error_messages', model: f.object %>
     
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -70,7 +70,7 @@
         </div>
         <%= f.text_area :social, class:"artists-social", id:"artist-social", placeholder:"Twitter、Instagram、Youtubeチャンネルなど" %>
         <div class="weight-bold-text">
-          LIVE映像、PVの一部など
+          LIVE映像、PVの一部など(再度添付)
           <span class="indispensable">必須</span>
         </div>
         <div class="vdo-click-upload">
@@ -100,8 +100,8 @@
     </div>
   
     <div class="new-up-btn-contents">
-      <%= f.submit "投稿する" , class:"new-up-btn" %>
-      <%=link_to '戻る', root_path, class:"new-back-btn" %>
+      <%= f.submit "編集する" , class:"new-up-btn" %>
+      <%=link_to 'もどる', artist_path, class:"new-back-btn" %>
     </div>
   </div>
   <% end %>

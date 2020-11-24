@@ -15,13 +15,13 @@
 
     <% if user_signed_in?%>
       <% if current_user == @artist.user %>
-        <%= link_to '内容の編集',  "#", class: "artist-show-btn" %>
-     
+        <%= link_to '内容の編集', edit_artist_path(@artist), class: "artist-show-btn" %>
         <%= link_to '削除する', "#", class:'artist-destroy' %>
-
         <%= link_to 'Cheer! する', "#" ,class:"artist-show-cheer-btn"%>
+        <%= link_to 'もどる', "/", class:"artist-show-back-btn"%>
       <% else %>
         <%= link_to 'Cheer! する', "#" ,class:"artist-show-cheer-btn"%>
+        <%= link_to 'もどる', "/", class:"artist-show-back-btn"%>
       <% end %>
     <% end %>
 
@@ -52,11 +52,13 @@
         </tr>
         <tr>
           <th class="detail-artist">SNSリンク</th>
-          <td class="detail-value"><%= @artist.social %></td>
+          <td class="detail-social-value"><%=link_to @artist.social, @artist.social %></td>
         </tr>
         <tr>
           <th class="detail-artist">映像リンク</th>
-          <td class="detail-value"><%= @artist.video.filename %></td>
+          <td class="detail-value">
+            <video src="<%= rails_blob_path(@artist.video)%>" type="video/mov",class="artist-video" controls></video>
+          </td>
         </tr>
         <tr>
           <th class="detail-artist">ホームページ</th>

@@ -166,19 +166,22 @@
 .new-up-btn {
   background: #f4a460;
   border: 1px solid #f4a460;
-  color: #fff;
+  color:white;
   width: 100%;
   height: 50px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   margin-bottom: 4vh;
 }
 
 .new-back-btn {
-  background: rgb(204, 204, 204);
+  background: blue;
   border: 1px solid rgb(204, 204, 204);
   color: white;
-  padding: 15px 45%;
+  padding: 18px 35vh;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 /* 下部ボタン */
