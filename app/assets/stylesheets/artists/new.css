@@ -71,6 +71,7 @@
   text-align: center;
   margin-bottom: 8vh;
 }
+
 /* ヘッダ部分 */
 
 /* 投稿画像 */
@@ -173,6 +174,10 @@
   font-weight: bold;
   margin-bottom: 4vh;
 }
+.new-up-btn:hover{
+  color:#333333;
+  border: 2px solid #333333;
+}
 
 .new-back-btn {
   background: blue;
@@ -182,6 +187,10 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
+}
+.new-back-btn:hover{
+  color:lightblue;
+  border: 2px solid lightblue;
 }
 
 /* 下部ボタン */
@@ -209,7 +218,9 @@
   font-size: 15px;
   margin: 3vw;
 }
-
+.menu>li>a:hover {
+  text-decoration:underline;
+}
 .inc {
   margin-top:1vh;
   font-size: 15px;

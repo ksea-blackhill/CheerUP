@@ -58,6 +58,10 @@
   margin: 20px 0px;
   padding: 2vh 10vw;
 }
+.artist-show-btn:hover{
+  color:#333333;
+  border: 2px solid #333333;
+}
 
 .artist-show-cheer-btn {
   text-align: center;
@@ -68,6 +72,10 @@
   margin: 20px 0px;
   padding: 2vh 9.5vw;
 }
+.artist-show-cheer-btn:hover{
+  color: rgb(251, 255, 0);
+  border: 2px solid rgb(251, 255, 0);
+}
 
 .artist-destroy {
   background-color: black;
@@ -77,6 +85,10 @@
   color: #FFF;
   padding: 2vh 11vw;
 }
+.artist-destroy:hover{
+  color: gray;
+  border: 2px solid gray;
+}
 .artist-show-back-btn{
   background-color: blue;
   text-align: center;
@@ -84,6 +96,10 @@
   font-size: 24px;
   color: white;
   padding: 2vh 12vw;
+}
+.artist-show-back-btn:hover{
+  color:lightblue;
+  border: 2px solid lightblue;
 }
 
 .artist-explain-box {

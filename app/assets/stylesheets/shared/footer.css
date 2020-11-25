@@ -35,6 +35,9 @@
   flex-flow: column;
   justify-content: space-between;
 }
+.footer-link:hover{
+  text-decoration: underline;
+}
 .logo-mark {
   position: right;
   margin-left:8vw;
