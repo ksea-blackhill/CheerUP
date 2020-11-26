@@ -1,0 +1,38 @@
+.choose-form-header-text{
+  line-height: 100px;
+  border-bottom: 2px solid #DDDDDD;
+  font-weight: bold;
+}
+.choose-cheer{
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.artist-cheer-btn{
+  text-align: center;
+  background-color: #f4a460;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 10px 0px;
+  padding: 2vh 10vw;
+}
+.artist-goods-btn{
+  text-align: center;
+  background-color: #f4a460;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 10px 0px;
+  padding: 2vh 10vw;
+}
+.artist-choose-back-btn{
+  text-align: center;
+  background-color: #f4a460;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 10px 0px;
+  padding: 2vh 10vw;
+}
