@@ -16,6 +16,9 @@
   font-size: 15px;
   margin: 0 20px;
 }
+.second-footer-text:hover{
+  text-decoration: underline;
+}
 
 .second-footer-logo {
   width: 110px;
