@@ -1,0 +1,89 @@
+<header class="cheer-header">
+    <%= link_to image_tag('cheer.png' , size: '160x160'), root_path %>
+</header>
+
+<div class='cheer-contents'>
+  <div class='cheer-content-main'>
+    <div class='cheer-artist-info'>
+      <div class='cheer-artist-content'>
+        <h1 class='cheer-artist-name'>
+          <%= @artist.name %>
+        </h1>
+      </div>
+      <%= image_tag @artist.image, class: 'cheer-artist-img' %>
+    </div>
+
+    <%= form_with model: @artist_form, url: artist_supports_path, id: 'artist-form', class: 'transaction-form-wrap',local: true do |f| %>
+     <%= render 'shared/error_messages', model: @artist_form %>
+    
+    <div class='cheer-payment'>
+      <div class='weight-bold-text'>
+        <span>投げ銭金額 (¥500〜¥1,000,000)</span>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_field :price, class:"price-input", id:"artist-price", placeholder:"例）500　数字を入力" %>
+    
+      <div class="weight-bold-text">
+        <span class="tax-price">事務手数料 (10%)</span>
+        <span>
+          <span id='add-tax-price'></span>円
+        </span>
+      </div>
+      <div class="weight-bold-text">
+        <span class="tax-price">アーティストに入る金額</span>
+        <span>
+          <span id='profit'></span>円
+      </div>
+    </div>
+
+    <div class="cheer-comment">
+        <div class="weight-bold-text">
+          アーティストへのコメント
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :comment, class:"artists-comment", id:"artist-comment", placeholder:"アーティストへの応援メッセージ（必須 20文字以上）例）Check!してみたところ応援したいと思いました。これからも活動頑張ってください。" ,rows:"20" ,maxlength:"1000" %>
+    </div>
+
+    <div class='credit-card-form'>
+      <div class="credit-form-group">
+        <div class='form-text-wrap'>
+          <label class="weight-bold-text">クレジットカード情報</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :number, class:"cheer-input-default", id:"card-number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+        <div class='available-card'>
+          <%= image_tag 'card-visa.gif', class: 'card-logo'%>
+          <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
+          <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
+          <%= image_tag 'card-amex.gif', class: 'card-logo'%>
+        </div>
+      </div>
+      <div class="credit-form-group">
+        <div class='form-text-wrap'>
+          <label class="weight-bold-text">有効期限</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <div class='input-expiration-date-wrap'>
+          <%= f.text_area :exp_month, class:"input-expiration-date", id:"card-exp-month", placeholder:"例)3" %>
+          <p class="cheer-form-text">月</p>
+          <%= f.text_area :exp_year, class:"input-expiration-date", id:"card-exp-year", placeholder:"例)23" %>
+          <p class="cheer-form-text">年</p>
+        </div>
+      </div>
+      <div class="credit-form-group">
+        <div class='form-text-wrap'>
+          <label class="weight-bold-text">セキュリティコード</label>
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_field :cvc,class:"cvc-input-default", id:"card-cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4" %>
+      </div>
+    </div>
+
+    <div class='cheer-btn'>
+      <%=link_to "Cheer!","#",class:"cheer-decide-btn" %>
+      <%=link_to "もどる","#",class:"cheer-back-btn" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/second_footer" %>
