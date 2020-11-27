@@ -7,6 +7,7 @@ class Artist < ApplicationRecord
   belongs_to_active_hash :artist_gender
 
   belongs_to :user
+  has_one :support
   has_one_attached :image
   has_one_attached :video
 
