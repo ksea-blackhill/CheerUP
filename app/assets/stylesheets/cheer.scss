@@ -61,7 +61,20 @@
   margin: 1vh 0 2vh 2vw;
 }
 .tax-price{
-  margin: 7vh 0 3vh 3vw;
+  margin: 7vh 0 3vh 0;
+}
+.add-tax-price{
+  margin-left: 7vw;
+}
+.artist-profit{
+  margin: 7vh 0 3vh 0;
+}
+.artist-profit-index{
+  text-decoration: underline;
+  font-size: 4vh;
+  font-weight:bold;
+  margin-left: 2vw;
+  color: #880000;
 }
 /* 支援金額入力 */
 
