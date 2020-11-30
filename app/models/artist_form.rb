@@ -12,6 +12,6 @@ class ArtistForm
 
   def save
     support = Support.create(user_id: user_id, artist_id: artist_id)
-    Comment.create(price: prece, comment: comment, support_id: support.id)
+    Comment.create(price: price, comment: comment, support_id: support.id)
   end
 end
