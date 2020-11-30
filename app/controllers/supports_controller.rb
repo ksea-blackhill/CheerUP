@@ -7,6 +7,12 @@ class SupportsController < ApplicationController
   
   def create
     @artist_form = ArtistForm.new(form_params)
+    if @artist_form.valid?
+      @artist_form.save
+      redirect_to root_path(@artist_form)
+    else
+      render action: :index
+    end
   end
 
   private
