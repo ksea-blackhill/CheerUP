@@ -49,7 +49,10 @@
 .cheer-payment{
   display:flex;
   flex-direction: column;
-  margin: 3vh 0 0 3vw;
+  margin: 4vh 0 0 3vw;
+}
+.price-caution{
+  font-size: 11px;
 }
 .price-input{
   width: 30%;
@@ -64,16 +67,16 @@
   margin: 7vh 0 3vh 0;
 }
 .add-tax-price{
-  margin-left: 7vw;
+  margin-left: 11vw;
 }
 .artist-profit{
   margin: 7vh 0 3vh 0;
 }
 .artist-profit-index{
   text-decoration: underline;
-  font-size: 4vh;
+  font-size: 5vh;
   font-weight:bold;
-  margin-left: 2vw;
+  margin-left: 7vw;
   color: #880000;
 }
 /* 支援金額入力 */
