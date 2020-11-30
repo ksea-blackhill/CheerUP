@@ -25,14 +25,15 @@
     
       <div class="weight-bold-text">
         <span class="tax-price">事務手数料 (10%)</span>
-        <span>
+        <span class="add-tax-price">
           <span id='add-tax-price'></span>円
         </span>
       </div>
       <div class="weight-bold-text">
-        <span class="tax-price">アーティストに入る金額</span>
-        <span>
+        <span class="artist-profit">アーティストに入る金額</span>
+        <span class="artist-profit-index">
           <span id='profit'></span>円
+        </span>
       </div>
     </div>
 
@@ -80,7 +81,7 @@
     </div>
 
     <div class='cheer-btn'>
-      <%=link_to "Cheer!","#",class:"cheer-decide-btn" %>
+      <%=f.submit "Cheer!",class:"cheer-decide-btn" %>
       <%=link_to "もどる","#",class:"cheer-back-btn" %>
     </div>
     <% end %>
