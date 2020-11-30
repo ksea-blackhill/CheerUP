@@ -17,10 +17,10 @@
       <% if current_user == @artist.user %>
         <%= link_to '内容の編集', edit_artist_path(@artist), class: "artist-show-btn" %>
         <%= link_to '削除する', artist_path, method: :delete, class:'artist-destroy' %>
-        <%= link_to 'Cheer! する', '#' ,class:"artist-show-cheer-btn"%>
+        <%= link_to 'Cheer! する', artist_supports_path(@artist.id) ,class:"artist-show-cheer-btn"%>
         <%= link_to 'もどる', "/", class:"artist-show-back-btn"%>
       <% else %>
-        <%= link_to 'Cheer! する', "#" ,class:"artist-show-cheer-btn"%>
+        <%= link_to 'Cheer! する', artist_supports_path(@artist.id) ,class:"artist-show-cheer-btn"%>
         <%= link_to 'もどる', "/", class:"artist-show-back-btn"%>
       <% end %>
     <% end %>
@@ -77,7 +77,9 @@
     <div class= "artist-comment">コメント一覧</div>
     <div class="comment-box">
     <form>
-      <textarea class="comment-text"></textarea>
+      <div class="comment-text">
+        <%#= %>
+      </div>
       <p class="comment-warn">
         相手のことを考え丁寧なコメントを心がけましょう。
         <br>

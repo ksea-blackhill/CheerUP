@@ -108,7 +108,7 @@
 | Column               | Type       | Options          |
 | -------------------- | ---------- | -----------------|
 | comment              | text       | null : false     |
-| payment              | references | foreign_key :true|
+| price                | string     | null : false     |
 
   ### Association
 

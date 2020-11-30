@@ -1,0 +1,203 @@
+/* 支援ページヘッダ */
+.cheer-header{
+  padding: 5vh 0;
+  text-align: center;
+  background-color:#FFFFCC;
+}
+/* 支援ページヘッダ */
+
+/* 支援ページ写真と名前 */
+.cheer-contents{
+  width: 100vw;
+  background-color: #FFFFCC;
+  display: flex;
+  justify-content: center;
+}
+
+.cheer-content-main{
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 5vh 10vw 10vh 10vw;
+}
+.cheer-artist-info{
+  height: 380px;
+  border-bottom: 3px solid #f5f5f5;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cheer-artist-name{
+  font-size: 3vw;
+  font-weight:bold;
+  margin-bottom:1vh;
+}
+
+.cheer-artist-img{
+  margin-bottom: 5vh;
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 支援ページ写真と名前 */
+
+/* 支援金額入力 */
+.cheer-payment{
+  display:flex;
+  flex-direction: column;
+  margin: 4vh 0 0 3vw;
+}
+.price-caution{
+  font-size: 11px;
+}
+.price-input{
+  width: 30%;
+  padding:12px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  margin: 1vh 0 2vh 2vw;
+}
+.tax-price{
+  margin: 7vh 0 3vh 0;
+}
+.add-tax-price{
+  margin-left: 11vw;
+}
+.artist-profit{
+  margin: 7vh 0 3vh 0;
+}
+.artist-profit-index{
+  text-decoration: underline;
+  font-size: 5vh;
+  font-weight:bold;
+  margin-left: 7vw;
+  color: #880000;
+}
+/* 支援金額入力 */
+
+/* コメント入力 */
+.cheer-comment{
+  display:flex;
+  flex-direction: column;
+  margin: 2vh 0 5vh 3vw;
+}
+.artists-comment{
+  width: 100%;
+  height:20vh;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+/* コメント入力 */
+
+/* カード情報の入力 */
+.credit-card-form {
+  margin-top: 15px;
+  padding-bottom: 30px;
+  border-top: 3px solid #f5f5f5;
+}
+.credit-form-group{
+  margin: 3vh 0 0 3vw;
+}
+.input-headline {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.cheer-input-default{
+  width: 70%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  margin: 1vh 0 2vh 2vw;
+}
+
+.available-card {
+  display: flex;
+  height: 35px;
+}
+
+.card-logo {
+  width: 40px;
+  margin: 0 0 1vh 2vw;
+}
+
+.input-expiration-date-wrap {
+  width: 60%;
+  display: flex;
+  text-align: center;
+  line-height: 55px;
+  margin-left:2vw;
+}
+.cheer-form-text{
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.input-expiration-date {
+  width: 20%;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+  line-height: 45px;
+  text-align: center;
+}
+.cvc-input-default{
+  width: 40%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  margin: 1vh 0 2vh 2vw;
+}
+/* /カード情報の入力 */
+
+/* 下部ボタン */
+.cheer-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cheer-decide-btn{
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 15px 0px;
+  padding: 2vh 5vw;
+  width: 60%;
+}
+.cheer-decide-btn:hover{
+  color: rgb(251, 255, 0);
+  border: 2px solid rgb(251, 255, 0);
+}
+.cheer-back-btn{
+  background-color: blue;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  padding: 2vh 5vw;
+  width: 60%;
+}
+.cheer-back-btn:hover{
+  color:lightblue;
+  border: 2px solid lightblue;
+}
