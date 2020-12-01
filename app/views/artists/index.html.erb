@@ -19,30 +19,30 @@
     </h2>
     <ul class='cando-lists'>
       <li class='list'>
-        <%#= image_tag "#", class:"list-pict" %>
         <span class='cando-list-number'>1</span>
         <h3 class='cando-list-text'>
           <span class='cando-list-main-text'>UP! 機能</span>
+          <%= image_tag "up.PNG", class:"list-pict" %>
         </h3>
         <p class='cando-list-description'>
           応援しているアーティストを掲載できる！
         </p>
       </li>
       <li class='list'>
-        <%#= image_tag "#", class:"list-pict" %>
         <span class='cando-list-number'>2</span>
         <h3 class='cando-list-text'>
           <span class='cando-list-main-text'> Check! 機能</span>
+          <%= image_tag "check.png", class:"list-pict" %>
         </h3>
         <p class='cando-list-description'>
           気になるアーティストをチェックできる！
         </p>
       </li>
       <li class='list'>
-        <%#= image_tag "#", class:"list-pict" %>
         <span class='cando-list-number'>3</span>
         <h3 class='cando-list-text'>
           <span class='cando-list-main-text'> Cheer! 機能</span>
+          <%= image_tag "cheer.png", class:"list-pict" %>
         </h3>
         <p class='cando-list-description'>
           応援したいアーティストを支援できる！
@@ -82,6 +82,7 @@
   </div>
 
 <div class='up-btn'>
+    <span class='up-guide'>UP!はこちらから↓</span>
     <a href="artists/new">
     <%= image_tag 'up.PNG' ,class: "up-btn-icon" %>
 </div>

@@ -24,16 +24,17 @@
   font-weight: bold;
   position: center;
   color: black;
+  margin-bottom:2vh;
 }
 
 .footer-link {
-  color:black;
   font-size: 17px;
   line-height: 35px;
   text-decoration: none;
   display:flex;
   flex-flow: column;
   justify-content: space-between;
+  color:#1f1d1d;
 }
 .footer-link:hover{
   text-decoration: underline;
@@ -58,6 +59,7 @@
   justify-content: space-between;
   flex-flow: column;
   text-align: justify;
+  margin-top:2vh;
 }
 
 .app-lists{
