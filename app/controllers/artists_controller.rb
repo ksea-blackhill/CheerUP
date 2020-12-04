@@ -20,6 +20,10 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    @support = Support.find(params[:id])
+    if @support.comment != nil
+      @comment = Comment.find(params[:id])
+    end
   end
 
   def edit
@@ -37,8 +41,6 @@ class ArtistsController < ApplicationController
     @artist.destroy
     redirect_to root_path
   end
-  
-
 
   private
 
