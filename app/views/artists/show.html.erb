@@ -57,7 +57,7 @@
         <tr>
           <th class="detail-artist">映像リンク</th>
           <td class="detail-value">
-            <video src="<%= rails_blob_path(@artist.video)%>" type="video/quicktime",class="artist-video" controls></video>
+            <video src="<%= rails_blob_path(@artist.video) %>" type="video/quicktime" controls class="artist-video"></video>
           </td>
         </tr>
         <tr>
@@ -78,8 +78,14 @@
     <div class="comment-box">
     <form>
       <div class="comment-text">
-        <%#= %>
+      <% unless @comment == nil %>
+        <%=@comment.comment %>
+        <br>【 支援者：<%=@support.user.nickname%>
+            <%=@support.user.prefecture.name%>
+            <%=@support.user.age.name%> 】
+      <% end %>
       </div>
+    
       <p class="comment-warn">
         相手のことを考え丁寧なコメントを心がけましょう。
         <br>
