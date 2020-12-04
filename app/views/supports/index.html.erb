@@ -83,7 +83,7 @@
 
     <div class='cheer-btn'>
       <%=f.submit "Cheer!",class:"cheer-decide-btn" %>
-      <%=link_to "もどる","#",class:"cheer-back-btn" %>
+      <%=link_to "もどる",artist_path(@artist.id),class:"cheer-back-btn" %>
     </div>
     <% end %>
   </div>
