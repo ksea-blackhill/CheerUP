@@ -10,7 +10,7 @@ class SupportsController < ApplicationController
     if @artist_form.valid?
       pay_artist
       @artist_form.save
-      redirect_to root_path(@artist_form)
+      redirect_to artist_path(@artist.id)
     else
       render action: :index
     end
@@ -27,7 +27,7 @@ class SupportsController < ApplicationController
   end
 
   def pay_artist
-    Payjp.api_key = "sk_test_66c7ed14734412776a2626ae"
+    Payjp.api_key = ENV["PAYJP_SECRET_KEY1"]
     Payjp::Charge.create(
       amount: @artist_form.price,
       card: form_params[:token],

@@ -1,5 +1,5 @@
 const pay = () => {
-  Payjp.setPublicKey("pk_test_2e21b07856f3f0aa63b83953");
+  Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY1);
   const artistForm = document.getElementById("artist-form");
   artistForm.addEventListener('submit', (e) => {
     e.preventDefault();
