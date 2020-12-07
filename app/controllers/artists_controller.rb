@@ -20,10 +20,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @support = Support.find(params[:id])
-    if @support.comment != nil
-      @comment = Comment.find(params[:id])
-    end
+    @comment = Comment.all.order(created_at: "DESC")
   end
 
   def edit

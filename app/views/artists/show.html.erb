@@ -78,11 +78,14 @@
     <div class="comment-box">
     <form>
       <div class="comment-text">
-      <% unless @comment == nil %>
-        <%=@comment.comment %>
-        <br>【 支援者：<%=@support.user.nickname%>
-            <%=@support.user.prefecture.name%>
-            <%=@support.user.age.name%> 】
+      <% unless @artist.support == nil %>
+        <% @comment.each do |artist|%>
+          <%=artist.support.comment.comment %>
+        <br>【 支援者：<%=artist.support.user.nickname%>
+            　<%=artist.support.user.prefecture.name%>
+            　<%=artist.support.user.age.name%> 】
+        <br>
+        <% end %>
       <% end %>
       </div>
     
