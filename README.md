@@ -29,8 +29,6 @@
  `Ruby/Ruby on Rails/MySQL/visual studio code`
 
 # 今後実装したい機能
- - 支援機能
- - コメント機能
  - いいね機能
  - グッズ購入機能
  - ジャンル別検索機能
